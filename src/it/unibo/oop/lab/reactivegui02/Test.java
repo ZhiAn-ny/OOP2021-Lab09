@@ -30,9 +30,10 @@ public final class Test {
      * pilotare la direzione su/giù si aggiunga un flag booleano all'agente --
      * deve essere volatile? - la disabilitazione dei pulsanti sia realizzata
      * col metodo setEnabled
-     * 
-     * Non è necessario che sia volatile perché solo il thread che gestisce
-     * Agent ha bisogno di conoscere il suo valore. (?)
+     *
+     * Deve essere volatile in quanto il valore della variabile è visto anche
+     * all'interno del costruttore (in quanto sono chiamati i metodi setIncreasing
+     * e setDecreasing).
      * 
      */
 
